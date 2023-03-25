@@ -25,7 +25,7 @@ function Newscomponent(props) {
       settotal_article(parsedData.total_article);
       setloading(false);
     };
-    document.title = `${capitalizeFirstLetter(props.category)} - Fas-News`;
+    document.title = `${capitalizeFirstLetter(props.category)} - FasNews`;
     loader();
     // eslint-disable-next-line
   }, []);
@@ -44,11 +44,14 @@ function Newscomponent(props) {
   };
 
   return (
-    <>
+    <div>
       <h1
-        className="text-center"
+        className=" text-center"
+        style={{
+          margin:"50px"
+        }}
       >
-        Fas-News - Top {capitalizeFirstLetter(props.category)} Headlines
+        FasNews - Top {capitalizeFirstLetter(props.category)} Headlines
       </h1>
       <InfiniteScroll
         dataLength={article.length}
@@ -76,7 +79,7 @@ function Newscomponent(props) {
           </div>
         </div>
       </InfiniteScroll>
-    </>
+    </div>
   );
 }
 
