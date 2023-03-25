@@ -25,7 +25,7 @@ function Newscomponent(props) {
       settotal_article(parsedData.total_article);
       setloading(false);
     };
-    document.title = `${capitalizeFirstLetter(props.category)} - NewsMonkey`;
+    document.title = `${capitalizeFirstLetter(props.category)} - Fas-News`;
     loader();
     // eslint-disable-next-line
   }, []);
@@ -48,7 +48,7 @@ function Newscomponent(props) {
       <h1
         className="text-center"
       >
-        NewsMonkey - Top {capitalizeFirstLetter(props.category)} Headlines
+        Fas-News - Top {capitalizeFirstLetter(props.category)} Headlines
       </h1>
       <InfiniteScroll
         dataLength={article.length}
